@@ -1,10 +1,9 @@
+import { Box } from "@chakra-ui/react";
 
 
-const ItemListContainer = ({label}) => {
+const ItemListContainer = ({greeting}) => {
     return(
-        <div>
-            <h1>{label}</h1>
-        </div>
+        <Box width={"100vw"} height={"90vh"} display={"flex"}  alignItems={"center"}  justifyContent={"center"}>{greeting}</Box>
     );
 };
 
