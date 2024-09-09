@@ -13,8 +13,9 @@ import {
   Flex,
   flexbox,
 } from "@chakra-ui/react";
+import { Link } from "react-router-dom";
 
-const ItemListContainer = ({ products }) => {
+export const ItemListContainer = ({ products }) => {
   return (
     <Box display={"flex"} flexWrap={"wrap"} justifyContent={"space-evenly"}>
     {
@@ -39,6 +40,7 @@ const ItemListContainer = ({ products }) => {
                   <Button variant="ghost" colorScheme="blue">
                     Add to cart
                   </Button>
+                  <Link to={`/item/${product.id}`}> Ir a detalle de producto</Link>
                 </ButtonGroup>
               </CardFooter>
             </Card>
@@ -48,5 +50,3 @@ const ItemListContainer = ({ products }) => {
   </Box>
   )
 };
-
-export default ItemListContainer;

@@ -1,4 +1,4 @@
-import NavBar from "../components/NavBar/NavBar";
+import { NavBar, ItemListContainer, CartWidget } from '../components';
 import {useRef} from 'react';
 
 const MainLayout = ({children}) => {
