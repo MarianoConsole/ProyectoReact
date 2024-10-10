@@ -1,19 +1,21 @@
-import React from 'react'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Home } from '../pages/home'
-import { NavBar } from '../components';
-import { Item } from '../pages';
+import React from "react";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { Category, Checkout, Home, Item, Payment } from "../pages";
+import { NavBar } from "../components";
 
-
+//rafc iniciará un componente funcional con arrow function y export
+// rafce iniciará un componente funcional con arrow function y export default
 export const MainRouter = () => {
   return (
     <BrowserRouter>
-    <NavBar />
-    <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/item/:id' element={<Item/>}/>
-        <Route path='/category/:categoryId' element={<Category/>}/>
-    </Routes>
+      <NavBar />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/item/:id" element={<Item />} />
+        <Route path="/category/:categoryId" element={<Category />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/payment" element={<Payment />} />
+      </Routes>
     </BrowserRouter>
   );
 };

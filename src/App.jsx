@@ -1,16 +1,14 @@
-import { ChakraProvider, Flex, Spinner } from "@chakra-ui/react";
-import { ItemListContainer } from "./components";
-import { useProducts } from "./hooks/useProducts";
-import { useProductsById } from "./hooks";
+import React from "react";
+import { ChakraProvider } from "@chakra-ui/react";
 import { MainRouter } from "./routes";
+import { CartProvider } from "./context";
 
 function App() {
-  const { productsData, loading } = useProducts();
-  const { productData } = useProductsById(1);
-
   return (
     <ChakraProvider>
-      <MainRouter />
+      <CartProvider>
+        <MainRouter />
+      </CartProvider>
     </ChakraProvider>
   );
 }
